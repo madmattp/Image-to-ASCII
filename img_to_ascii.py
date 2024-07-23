@@ -9,8 +9,8 @@ def parse_arguments():
     )
 
     parser.add_argument('-v', '--verbose', action='store_true', help='Executes in "verbose" mode')
-    parser.add_argument('-r', '--resolution', metavar='<res>', default='100x100', help='Specifies the resolution of the output (default: 100x100)')
-    parser.add_argument('-i', '--image', metavar='<img>', help='Specifies the image to be used as input.')
+    parser.add_argument('-r', '--resolution', metavar='<res>', required=True, default='100x100', help='Specifies the resolution of the output (default: 100x100)')
+    parser.add_argument('-i', '--image', metavar='<img>', required=True, help='Specifies the image to be used as input.')
     parser.add_argument('-o', '--output', metavar='<name>', default='output.txt', help='Specifies the name of the file that will be used as output (default: output.txt)')
     parser.add_argument('-c', '--clipboard', action='store_true', help='Automatically copies image to the clipboard')
 
