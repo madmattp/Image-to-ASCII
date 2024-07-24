@@ -2,7 +2,7 @@
   Converts any image into ASCII.
 
 ## Usage
-```python3 img_to_ascii.py [-h] [-v] [-r <res>] [-i <img>] [-o <name>] [-c] ```
+```usage: img_to_ascii.py [-h] [-v] -r <res> -i <img> [-o <name>] [-c]```
 
 Example: ```python3 img_to_ascii.py -v -i image.png -r 300x300 -c -o art.txt```
 
