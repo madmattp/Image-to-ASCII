@@ -18,7 +18,7 @@ def parse_arguments():
     return args
 
 def img_to_ascii(image):
-    d = {10:"█", 9:"▓", 8:"@", 7:"?", 6:"O", 5:"P", 4:"o", 3:"c", 2:";", 1:".", 0:"⠀"} #⠀ . ; c o P 0 ? @ █
+    d = '⠀.;coPO?@▓█'
     copy = ""
 
     rows, cols = image.shape
@@ -62,7 +62,7 @@ if __name__ == "__main__":
         print("[ Added image to clipboard! ]")
 
     try:
-        with open(file=args.output, mode="x") as file:
+        with open(file=args.output, mode="w") as file:
             file.write(output)
     except FileExistsError as e:
         print(f"[{e}] File'{args.output}' already exists!")
